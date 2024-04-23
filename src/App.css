@@ -1,38 +1,279 @@
-.App {
-  text-align: center;
+@import url('https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700,800,900&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', 'sans-serif';
+  scroll-behavior: smooth;
+  user-select: none;
 }
 
-.App-logo {
-  height: 40vmin;
+.App {
+  min-height: 100vh;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  background: linear-gradient(#2b1055, #2D1867);
+}
+
+.VerticalTimeline {
+  overflow-y: scroll;
+  max-height: calc(100vh - 80px);
+}
+
+header {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 30px 100px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 10000;
+}
+
+header .logo  {
+  color: #fff;
+  font-weight: 700;
+  text-decoration: none;
+  font-size: 2em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  cursor: default;
+}
+
+header ul {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 60px;
+}
+
+header ul li {
+  list-style: none;
+  margin-left: 20px;
+}
+
+header ul li button {
+  text-decoration: none;
+  padding: 6px 15px;
+  /* color: #fff; */
+  color: #fff;
+  background-color: transparent;
+  border-radius: 20px;
+}
+
+header ul li button:hover,
+header ul li button:active {
+  background: #fff;
+  color: #2b1055;
+}
+
+section {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  padding: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+section::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  background: linear-gradient(to top, #1c0522, transparent);
+  z-index: 1000;
+}
+
+section img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+section img#moon {
+  mix-blend-mode: screen;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+section img#mountains_front {
+  z-index: 10;
+}
+
+#text {
+  position: absolute;
+  color: #fff;
+  white-space: nowrap;
+  font-size: 7.5vw;
+  z-index: 9;
+  right: -350px;
+}
+
+#btn {
+  text-decoration: none;
+  padding: 8px 30px;
+  border-radius: 40px;
+  background: #fff;
+  color: #2b1055;
+  font-size: 1.5em;
+  z-index: 9;
+  transform: translateY(100px);
+}
+
+.sec {
+  position: relative;
+  padding: 100px;
+  background: #1c0522;
+}
+
+.sec h2 {
+  font-size: 3.2em;
+  margin-bottom: 10px;
+  color: #fff;
+}
+
+.sec p {
+  font-size: 1.2em;
+  color: #fff;
+}
+
+.education {
+  background: #1c0522;
+  color: #fff;
+}
+
+.icon-container {
+  margin-top: 5px;
+  margin-left: -5px;
+}
+
+.icon-container svg {
+  width: 35px;
+  height: 35px;
+  color: black;
+  /* animation-iteration-count: 2; */
+}
+
+.icon-container svg:hover {
+  color: purple;
+}
+
+#timeline {
+  padding-bottom: 60px;
+  background: linear-gradient(to top, #3a0352, #27123a,#1c0522);
+}
+
+.projects {
   display: flex;
   flex-direction: column;
-  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  align-items: center;
+  height: 80vh;
+  background: linear-gradient(to bottom, #3a0352, #1c0522);
 }
 
-.App-link {
-  color: #61dafb;
+.projects h1 {
+  font-size: 24px;
+  color: #fff;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.project-widgets {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); /* Responsive grid */
+  gap: 20px;
+  max-width: 1200px;
+  width: 90%;
+}
+
+.project-widgets a {
+  text-decoration: none;
+}
+
+.MuiPaper-root {
+  height: 400px;
+}
+
+.project-widgets .MuiCard-root {
+  background-color: #fff;
+}
+
+.MuiTypography-root {
+  font-weight: 300px;
+  color: black;
+}
+
+.MuiCardContent-root p {
+  margin-top: 10px;
+  color: black;
+}
+
+.MuiCardContent-root img {
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+  margin-top: 30px;
+}
+
+/* ContactForm.css */
+
+
+@media (max-width: 500px) {
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
   }
-  to {
-    transform: rotate(360deg);
+
+  header p {
+    margin-bottom: 10px;
+    width: 262px;
+    /* background-color: red; */
+  }
+
+  header ul {
+    margin-right: 0;
+  }
+
+  .projects {
+    height: 140vh;
+  }
+
+  .mt-5 {
+    margin-left: 10px;
+    width: 300px;
+  }
+
+  .icon-container {
+    margin-top: 5px;
+    margin-left: -5px;
+  }
+
+  .icon-container svg {
+    width: 35px;
+    height: 35px;
+  }
+
+  .project-widgets{
+    margin-top: 10px;
   }
 }
