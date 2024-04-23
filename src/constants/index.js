@@ -250,7 +250,7 @@ import {
         },
       ],
       image: flaskImage,
-      source_code_link: "https://github.com/Manish-Salavkar/WeatherApp-Flask/tree/main/weatherapp",
+      source_code_link: "https://manishs.pythonanywhere.com/",
     },
     {
       name: "Indeed Scraper",
