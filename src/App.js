@@ -36,6 +36,8 @@ function App() {
     const btn = document.getElementById('btn');
     const header = document.querySelector('header');
 
+    document.title = 'Manish Salavkar';
+
     const handleScroll = () => {
       const value = window.scrollY;
       stars.style.left = value * 0.25 + 'px';
@@ -62,8 +64,8 @@ function App() {
         <ul>
           <li><button onClick={() => scrollToRef(homeRef)}>Home</button></li>
           <li><button onClick={() => scrollToRef(aboutRef)}>About</button></li>
-          <li><button onClick={() => scrollToRef(projectsRef)}>Projects</button></li>
-          <li><button onClick={() => scrollToRef(contactRef)}>Contact</button></li>
+          <li><button onClick={() => scrollToRef(projectsRef)}>Overview</button></li>
+          <li><button onClick={() => scrollToRef(contactRef)}>Projects</button></li>
         </ul>
       </header>
 

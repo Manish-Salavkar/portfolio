@@ -139,7 +139,7 @@ import {
     },
     {
       title: "Web Development Internship",
-      url: "",
+      url: "https://github.com/Manish-Salavkar/WeatherApp-Flask/tree/main/weatherapp",
       company_name: "Academor",
       icon: faLaptopCode,
       iconBg: "#E6DEDD",
@@ -152,7 +152,7 @@ import {
     },
     {
       title: "Full stack Developer",
-      url: "",
+      url: "https://github.com/Manish-Salavkar/Django-DRF-Scrapy",
       company_name: "JobHub",
       icon: faTools,
       iconBg: "#E6DEDD",
@@ -225,7 +225,7 @@ import {
         },
       ],
       image: jobhubImage,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/Manish-Salavkar/Django-DRF-Scrapy",
     },
     {
       name: "Weather App",
@@ -250,7 +250,7 @@ import {
         },
       ],
       image: flaskImage,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/Manish-Salavkar/WeatherApp-Flask/tree/main/weatherapp",
     },
     {
       name: "Indeed Scraper",
@@ -271,7 +271,7 @@ import {
         },
       ],
       image: scrapyImage,
-      source_code_link: "https://github.com/",
+      source_code_link: "https://github.com/Manish-Salavkar/Scrapy-Indeed/tree/main/job",
     },
   ];
   
